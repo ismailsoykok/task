@@ -16,7 +16,7 @@ Bu proje, Ethereum ağındaki büyük USDT transferlerini dinleyen bir backend v
 
 ## Ortam Değişkenleri
 
-Çalıştırmadan önce `.env` dosyalarının doğru doldurulması gerekir.
+Çalıştırmadan önce `.env` dosyalarının doğru doldurulması gerekir. Kolaylık sağlamak amacıyla .env dosyalarını paylaştım, normalde yapılmaması gereken bir işlem.
 
 ### Backend
 
