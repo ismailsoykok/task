@@ -1,0 +1,132 @@
+:root {
+  /* Colors - Vichy Theme */
+  --bg-main: #F4F6F6; /* Soft gray-white base */
+  --bg-sidebar: #FFFFFF; /* Crisp white sidebar */
+  --bg-card: #FFFFFF; /* Crisp white cards */
+  --bg-card-hover: #F8FAFA;
+  
+  --border-color: #D8DCDC; /* Subtle border */
+  --border-color-hover: #BBBFBF; /* Vichy light gray (#BBBFBF) */
+  
+  --text-primary: #1C2021; /* High contrast dark gray */
+  --text-secondary: #4A5054; /* Medium gray */
+  --text-muted: #878787; /* Vichy medium gray (#878787) */
+  
+  --accent-purple: #878787; /* Map secondary metric (Outflows) to Vichy Medium Gray */
+  --accent-purple-glow: rgba(135, 135, 135, 0.12);
+  --accent-teal: #05AD98; /* Vichy vibrant teal (#05AD98) */
+  --accent-teal-glow: rgba(5, 173, 152, 0.12);
+  --accent-red: #E05252; /* Soft red for warning banner */
+  --accent-blue: #05AD98; /* Map transactions dot to Vichy Teal */
+  --accent-blue-real: #3B82F6; /* Premium royal blue */
+  --accent-purple-violet: #8B5CF6; /* Premium purple/violet */
+  --accent-orange: #F97316; /* Premium vibrant orange */
+  --accent-pink-red: #EC4899; /* Premium rose/pink */
+  
+  /* Fonts */
+  --font-heading: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  font-family: var(--font-body);
+  color-scheme: light;
+  background-color: var(--bg-main);
+  color: var(--text-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-secondary);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-color-hover);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(5, 173, 152, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(5, 173, 152, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(5, 173, 152, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Typography styles */
+.text-gradient {
+  background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-teal {
+  color: var(--accent-teal);
+}
